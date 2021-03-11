@@ -1,0 +1,13 @@
+<template>
+  <div>
+    Search form
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'SearchForm'
+}
+</script>
+
+<style scoped></style>

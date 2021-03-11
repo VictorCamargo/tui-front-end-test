@@ -1,0 +1,65 @@
+/* Colors */
+
+// TUI Red
+$tui-red-400: #800509;
+$tui-red-200: #b50006;
+$tui-red-100: #d40e14;
+$tui-red-50: #e43c42;
+$tui-red-25: #ee6e73;
+$tui-red-25u: #f79da0;
+$tui-red-50u: #fcc7c9;
+$tui-red-100u: #ffeaea;
+
+// TUI Blue
+$color-tui-blue-1600: #0076b5;
+$color-tui-blue-800: #048dcc;
+$color-tui-blue-400: #10a0de;
+$color-tui-blue-200: #2fb2eb;
+$color-tui-blue-100: #70cbf4;
+$color-tui-blue-50: #c2e6fa;
+$color-tui-blue-25: #e2f3fe;
+$color-tui-blue-25u: #f2f9ff;
+
+// TUI Dark Blue
+$tui-dark-200: #011333;
+$tui-dark-100: #092a5e;
+$tui-dark-50: #1e4785;
+$tui-dark-25: #436da8;
+$tui-dark-25u: #7197c9;
+$tui-dark-50u: #a3c1e6;
+$tui-dark-100u: #cde1f7;
+$tui-dark-200u: #edf6ff;
+
+// TUI Grey
+$tui-black: #000000;
+$tui-grey-200: #3f3f3f;
+$tui-grey-100: #737373;
+$tui-grey-75: #9b9b9b;
+$tui-grey-50: #b9b9b9;
+$tui-grey-38: #cdcdcd;
+$tui-grey-25: #dcdcdc;
+$tui-grey-25u: #e9e9e9;
+$tui-grey-38u: #f5f5f5;
+$tui-white: #ffffff;
+
+// Z-index
+$z-index: (
+  header: 100,
+  modal: 101
+);
+
+// Font-family
+$font-family: (
+  main: (
+    Arial,
+    sans-serif
+  )
+);
+
+@function z-index($key) {
+  @return map-get($z-index, $key);
+}
+
+@function font-family($key) {
+  @return map-get($font-family, $key);
+}

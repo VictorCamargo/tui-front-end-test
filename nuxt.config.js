@@ -52,10 +52,11 @@ export default {
             plugins: [
               { removeDoctype: true },
               { removeComments: true },
-              { cleanupIDs: false },
+              { cleanupIDs: true },
               { removeViewBox: false },
               {
                 prefixIds: {
+                  prefixIds: true,
                   prefixClassNames: false
                 }
               }

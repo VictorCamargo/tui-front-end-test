@@ -1,12 +1,19 @@
 <template>
-  <div class="dropdown">
+  <div class="dropdown" :class="{ 'dropdown--visible': active }">
     <slot></slot>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Dropdown'
+  name: 'Dropdown',
+
+  props: {
+    active: {
+      type: Boolean,
+      default: false
+    }
+  }
 }
 </script>
 
@@ -21,8 +28,11 @@ export default {
   border: 1px solid rgba(#000, 0.05);
   opacity: 0;
   visibility: hidden;
+  transform: translateY(-15px);
+  transition: 0.2s cubic-bezier(0, 0.3, 0.13, 1);
 
   &--visible {
+    transform: translateY(0px);
     opacity: 1;
     visibility: visible;
   }

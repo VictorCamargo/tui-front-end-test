@@ -1,17 +1,28 @@
 <template>
-  <li class="dropdown_item">
+  <li
+    class="dropdown__item"
+    :class="{ 'dropdown__item--disabled': disabled }"
+    @click="$emit('clicked')"
+  >
     <slot />
   </li>
 </template>
 
 <script>
 export default {
-  name: 'DropdownItem'
+  name: 'DropdownItem',
+
+  props: {
+    disabled: {
+      type: Boolean,
+      default: false
+    }
+  }
 }
 </script>
 
 <style lang="scss">
-.dropdown_item {
+.dropdown__item {
   display: flex;
   list-style: none;
   color: $color-link;
@@ -19,8 +30,13 @@ export default {
   font-weight: bold;
   height: 40px;
   align-items: center;
-
+  padding: 0 15px;
+  white-space: nowrap;
   transition: background 0.3s cubic-bezier(0.26, 0.54, 0.57, 0.99);
+
+  &--disabled {
+    pointer-events: none;
+  }
 
   &:hover {
     background: $color-tui-blue-25;
@@ -29,13 +45,12 @@ export default {
   a,
   button {
     padding: 0 15px;
+    margin: 0 -15px;
     display: flex;
     color: $color-link;
     text-decoration: none;
-    width: 100%;
     height: 100%;
     align-items: center;
-    white-space: nowrap;
   }
 
   .tui-svg {

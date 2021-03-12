@@ -2,21 +2,23 @@
   <header class="main-header">
     <div class="container d-flex">
       <div class="d-flex">
-        <LogoTui />
+        <nuxt-link :to="localePath('/')">
+          <LogoTui />
+        </nuxt-link>
         <nav class="header-menu d-flex">
-          <Button>Hotels</Button>
-          <Button>Destinations</Button>
-          <Button>Inspiration</Button>
+          <Button>{{ $t('header.menu.hotels') }}</Button>
+          <Button>{{ $t('header.menu.destinations') }}</Button>
+          <Button>{{ $t('header.menu.inspiration') }}</Button>
         </nav>
       </div>
 
       <div class="d-flex">
         <nav class="header-menu d-flex">
-          <Button>Help</Button>
-          <Button>Send feedback</Button>
+          <Button>{{ $t('header.menu.help') }}</Button>
+          <Button>{{ $t('header.menu.send_feedback') }}</Button>
           <LanguageSelector></LanguageSelector>
           <Button>EUR €</Button>
-          <Button type="lite">Log in</Button>
+          <Button type="lite">{{ $t('header.menu.log_in') }}</Button>
         </nav>
       </div>
     </div>

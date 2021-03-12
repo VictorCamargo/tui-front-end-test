@@ -1,4 +1,14 @@
 module.exports = {
+  header: {
+    menu: {
+      hotels: 'Hotels',
+      destinations: 'Destinations',
+      inspiration: 'Inspiration',
+      help: 'Help',
+      send_feedback: 'Send feedback',
+      log_in: 'Log in'
+    }
+  },
   home: {
     meta: {
       title: 'TUI Portugal - Tour Operator',

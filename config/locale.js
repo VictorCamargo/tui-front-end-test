@@ -1,30 +1,38 @@
-const en = require('../lang/en-GB.js')
-const pt = require('../lang/pt-PT.js')
+const enGB = require('../lang/en-GB.js')
+const ptPT = require('../lang/pt-PT.js')
+const ptBR = require('../lang/pt-BR.js')
 
 module.exports = {
   seo: false,
   parsePages: false,
   locales: [
     {
-      name: 'Português',
+      name: 'Português PT',
       code: 'pt',
       iso: 'pt-PT',
       isoCode: 'pt_pt',
-      file: 'pt.js'
+      file: 'pt-PT.js'
     },
     {
-      name: 'English',
+      name: 'Português BR',
+      code: 'br',
+      iso: 'pt-BR',
+      isoCode: 'pt_br',
+      file: 'pt-BR.js'
+    },
+    {
+      name: 'English UK',
       code: 'en',
       isoCode: 'en_gb',
       iso: 'en-GB',
-      file: 'en.js'
+      file: 'en-GB.js'
     }
   ],
   defaultLocale: 'en',
   langDir: 'lang/',
   vueI18n: {
     fallbackLocale: 'en',
-    messages: { en, pt }
+    messages: { pt: ptPT, br: ptBR, en: enGB }
   },
 
   detectBrowserLanguage: {

@@ -6,19 +6,31 @@
           <LogoTui />
         </nuxt-link>
         <nav class="header-menu d-flex">
-          <Button>{{ $t('header.menu.hotels') }}</Button>
-          <Button>{{ $t('header.menu.destinations') }}</Button>
-          <Button>{{ $t('header.menu.inspiration') }}</Button>
+          <Button :link="localePath('/')">
+            {{ $t('header.menu.hotels') }}
+          </Button>
+          <Button :link="localePath('/')">
+            {{ $t('header.menu.destinations') }}
+          </Button>
+          <Button :link="localePath('/')">
+            {{ $t('header.menu.inspiration') }}
+          </Button>
         </nav>
       </div>
 
       <div class="d-flex">
         <nav class="header-menu d-flex">
-          <Button>{{ $t('header.menu.help') }}</Button>
-          <Button>{{ $t('header.menu.send_feedback') }}</Button>
+          <Button :link="localePath('/')">
+            {{ $t('header.menu.help') }}
+          </Button>
+          <Button :link="localePath('/')">
+            {{ $t('header.menu.send_feedback') }}
+          </Button>
           <LanguageSelector></LanguageSelector>
           <Button>EUR €</Button>
-          <Button type="lite">{{ $t('header.menu.log_in') }}</Button>
+          <Button type="lite" :link="localePath('/')">
+            {{ $t('header.menu.log_in') }}
+          </Button>
         </nav>
       </div>
     </div>

@@ -1,5 +1,5 @@
 <template>
-  <footer class="tui-footer">
+  <footer class="main-footer d-flex">
     <div class="container">
       TODO Footer
     </div>
@@ -12,4 +12,4 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style lang="scss"></style>

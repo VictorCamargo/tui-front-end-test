@@ -25,15 +25,15 @@ export default {
 
   async fetch() {
     try {
-      const { data } = await this.$axios.$get(
-        'https://test.api.amadeus.com/v2/shopping/hotel-offers',
-        {
-          cityCode: 'LONG',
-          lang: 'pt'
-        }
-      )
-
-      console.log({ data })
+      // const { data } = await this.$axios.$get(
+      //   'https://test.api.amadeus.com/v2/shopping/hotel-offers',
+      //   {
+      //     cityCode: 'LONG',
+      //     lang: 'pt'
+      //   }
+      // )
+      //
+      // console.log({ data })
     } catch (error) {
       console.log(error.response.data)
     }

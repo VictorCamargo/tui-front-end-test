@@ -1,3 +1,4 @@
+// Resets
 html {
   font-family: font-family(main);
   font-size: 16px;
@@ -17,9 +18,12 @@ html {
 }
 
 .container {
-  max-width: 1630px;
-  margin-left: 15px;
-  margin-right: 15px;
+  width: 100%;
+  max-width: 1648px;
+  padding-left: 24px;
+  padding-right: 24px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .h1 {
@@ -77,4 +81,21 @@ html {
   line-height: 27.5px;
   font-weight: 400;
   color: $color-tui-blue-800;
+}
+
+// Helpers
+.d-flex {
+  display: flex;
+}
+
+.d-inline-block {
+  display: inline-block;
+}
+
+.justify-items-center {
+  justify-items: center;
+}
+
+.justify-content-center {
+  justify-content: center;
 }

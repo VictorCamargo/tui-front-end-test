@@ -7,8 +7,8 @@
 </template>
 
 <script>
-import TuiHeader from '@/components/global/TuiHeader'
-import TuiFooter from '@/components/global/TuiFooter'
+import TuiHeader from '@/components/header/MainHeader'
+import TuiFooter from '@/components/footer/TuiFooter'
 
 export default {
   name: 'default',

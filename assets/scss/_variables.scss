@@ -42,23 +42,44 @@ $tui-grey-25u: #e9e9e9;
 $tui-grey-38u: #f5f5f5;
 $tui-white: #ffffff;
 
+// Color alias
+$color-link: $tui-dark-100;
+
 // Z-index
 $z-index: (
   header: 100,
-  modal: 101
-);
-
-// Font-family
-$font-family: (
-  main: (
-    Arial,
-    sans-serif
-  )
+  dropdown: 101,
+  modal: 102
 );
 
 @function z-index($key) {
   @return map-get($z-index, $key);
 }
+
+// Border radius
+$border-radius: (
+  base: 3px,
+  extra: 5px
+);
+@function border-radius($key) {
+  @return map-get($border-radius, $key);
+}
+
+// Shadow
+$shadow: (
+  level1: 0px 2px 5px rgba(#000, 0.2),
+  level2: 0px 10px 20px rgba(#000, 0.15),
+  level3: 0px 24px 48px rgba(#000, 0.15)
+);
+
+@function box-shadow($key) {
+  @return map-get($shadow, $key);
+}
+
+// Font-family
+$font-family: (
+  main: 'TUIType'
+);
 
 @function font-family($key) {
   @return map-get($font-family, $key);

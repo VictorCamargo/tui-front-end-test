@@ -1,21 +1,31 @@
 <template>
   <nuxt-link
-    class="button d-flex"
-    :class="[`button--${type}`, { 'button--disabled': disabled }]"
+    v-if="link"
+    class="app-button d-flex"
+    :class="[`app-button--${type}`, { 'app-button--disabled': disabled }]"
     :to="link"
+    key="app-button"
   >
     <slot />
   </nuxt-link>
+  <button
+    v-else
+    key="app-button"
+    class="app-button d-flex"
+    :class="[`app-button--${type}`, { 'app-button--disabled': disabled }]"
+  >
+    <slot />
+  </button>
 </template>
 
 <script>
 export default {
-  name: 'HeaderMenuItem',
+  name: 'AppButton',
 
   props: {
     link: {
       type: String,
-      default: '#'
+      default: ''
     },
     type: {
       type: String,
@@ -30,13 +40,20 @@ export default {
 </script>
 
 <style lang="scss">
-.button {
+.app-button {
   position: relative;
   padding: 3px 0;
   font-size: 20px;
   font-weight: bold;
-  color: $color-link;
+  color: var(--tui-dark-100);
   text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-family: font-family(main);
+  min-height: 28px;
 
   $root: &;
 
@@ -52,7 +69,7 @@ export default {
     top: -4px;
     right: -4px;
     bottom: -4px;
-    border: 4px solid $color-tui-blue-100;
+    border: 4px solid var(--tui-blue-100);
     border-radius: border-radius(extra);
     z-index: -1;
     opacity: 0;
@@ -60,6 +77,10 @@ export default {
   }
 
   &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
     outline: none;
 
     &:before {
@@ -115,7 +136,7 @@ export default {
       width: 0;
       height: 2px;
       transition: width 0.3s cubic-bezier(0, 0.15, 0.37, 1);
-      background: $color-link;
+      background: var(--tui-dark-100);
       pointer-events: none;
     }
 
@@ -125,6 +146,7 @@ export default {
       right: -3px;
       bottom: -3px;
       border-width: 3px;
+      border-radius: 0px;
     }
 
     &:hover {

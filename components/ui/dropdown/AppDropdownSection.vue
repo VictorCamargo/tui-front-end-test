@@ -1,6 +1,6 @@
 <template>
-  <ul class="dropdown__section">
-    <li v-if="title" class="dropdown__title">
+  <ul class="app-dropdown__section">
+    <li v-if="title" class="app-dropdown__title">
       <span>{{ title }}</span>
     </li>
     <slot />
@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  name: 'DropdownSection',
+  name: 'AppDropdownSection',
 
   props: {
     title: String
@@ -18,7 +18,7 @@ export default {
 </script>
 
 <style lang="scss">
-.dropdown {
+.app-dropdown {
   &__section {
     padding: 8px 0;
 

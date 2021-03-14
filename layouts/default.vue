@@ -1,20 +1,20 @@
 <template>
   <div>
-    <TuiHeader />
+    <MainHeader />
     <Nuxt />
-    <TuiFooter />
+    <MainFooter />
   </div>
 </template>
 
 <script>
-import TuiHeader from '@/components/header/MainHeader'
-import TuiFooter from '@/components/footer/TuiFooter'
+import MainHeader from '@/components/header/MainHeader'
+import MainFooter from '@/components/footer/MainFooter'
 
 export default {
   name: 'default',
   components: {
-    TuiHeader,
-    TuiFooter
+    MainHeader,
+    MainFooter
   }
 }
 </script>

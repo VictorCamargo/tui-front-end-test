@@ -1,22 +1,28 @@
 <template>
   <div class="page-home">
-    <div class="container">
-      <SearchForm />
-      <HotelsList />
-    </div>
+    <AppHero
+      src="/img/maldives.jpeg"
+      alt="Kuramathi, Maldivas, Maldives"
+      title="Kuramathi, Maldivas, Maldives"
+    />
+    <section class="container">
+      <AppSearch />
+    </section>
   </div>
 </template>
 
 <script>
 import HotelsList from '@/components/HotelsList'
-import SearchForm from '~/components/SearchForm'
+import AppSearch from '@/components/AppSearch'
 
 import { seoMetaTags } from '~/utils/seo'
+import AppHero from '@/components/AppHero'
 
 export default {
   components: {
     HotelsList,
-    SearchForm
+    AppSearch,
+    AppHero
   },
 
   head() {
@@ -43,5 +49,9 @@ export default {
 
 <style lang="scss">
 .page-home {
+  .app-search {
+    z-index: 2;
+    margin-top: -40px;
+  }
 }
 </style>

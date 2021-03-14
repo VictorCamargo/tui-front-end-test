@@ -11,14 +11,14 @@ $tui-red-50u: #fcc7c9;
 $tui-red-100u: #ffeaea;
 
 // TUI Blue
-$color-tui-blue-1600: #0076b5;
-$color-tui-blue-800: #048dcc;
-$color-tui-blue-400: #10a0de;
-$color-tui-blue-200: #2fb2eb;
-$color-tui-blue-100: #70cbf4;
-$color-tui-blue-50: #c2e6fa;
-$color-tui-blue-25: #e2f3fe;
-$color-tui-blue-25u: #f2f9ff;
+$tui-blue-1600: #0076b5;
+$tui-blue-800: #048dcc;
+$tui-blue-400: #10a0de;
+$tui-blue-200: #2fb2eb;
+$tui-blue-100: #70cbf4;
+$tui-blue-50: #c2e6fa;
+$tui-blue-25: #e2f3fe;
+$tui-blue-25u: #f2f9ff;
 
 // TUI Dark Blue
 $tui-dark-200: #011333;
@@ -44,6 +44,7 @@ $tui-white: #ffffff;
 
 // Color alias
 $color-link: $tui-dark-100;
+$color-border: #00000033;
 
 // Z-index
 $z-index: (
@@ -76,9 +77,11 @@ $shadow: (
   @return map-get($shadow, $key);
 }
 
+$main-font: TUIType, 'Trebuchet MS';
+
 // Font-family
 $font-family: (
-  main: 'TUIType'
+  main: $main-font
 );
 
 @function font-family($key) {

@@ -1,3 +1,51 @@
+@import '_variables';
+
+:root {
+  // TUI Red
+  --tui-red-400: #{$tui-red-400};
+  --tui-red-200: #{$tui-red-200};
+  --tui-red-100: #{$tui-red-100};
+  --tui-red-50: #{$tui-red-50};
+  --tui-red-25: #{$tui-red-25};
+  --tui-red-25u: #{$tui-red-25u};
+  --tui-red-50u: #{$tui-red-50u};
+  --tui-red-100u: #{$tui-red-100u};
+
+  // TUI Blue
+  --tui-blue-1600: #{$tui-blue-1600};
+  --tui-blue-800: #{$tui-blue-800};
+  --tui-blue-400: #{$tui-blue-400};
+  --tui-blue-200: #{$tui-blue-200};
+  --tui-blue-100: #{$tui-blue-100};
+  --tui-blue-50: #{$tui-blue-50};
+  --tui-blue-25: #{$tui-blue-25};
+  --tui-blue-25u: #{$tui-blue-25u};
+
+  // TUI Dark Blue
+  --tui-dark-200: #{$tui-dark-200};
+  --tui-dark-100: #{$tui-dark-100};
+  --tui-dark-50: #{$tui-dark-50};
+  --tui-dark-25: #{$tui-dark-25};
+  --tui-dark-25u: #{$tui-dark-25u};
+  --tui-dark-50u: #{$tui-dark-50u};
+  --tui-dark-100u: #{$tui-dark-100u};
+  --tui-dark-200u: #{$tui-dark-200u};
+
+  // TUI Grey
+  --tui-black: #{$tui-black};
+  --tui-grey-200: #{$tui-grey-200};
+  --tui-grey-100: #{$tui-grey-100};
+  --tui-grey-75: #{$tui-grey-75};
+  --tui-grey-50: #{$tui-grey-50};
+  --tui-grey-38: #{$tui-grey-38};
+  --tui-grey-25: #{$tui-grey-25};
+  --tui-grey-25u: #{$tui-grey-25u};
+  --tui-grey-38u: #{$tui-grey-38u};
+  --tui-white: #{$tui-white};
+
+  --color-border: #{$color-border};
+}
+
 // Resets
 html {
   font-family: font-family(main);
@@ -86,7 +134,7 @@ a {
   font-size: 20px;
   line-height: 27.5px;
   font-weight: 400;
-  color: $color-tui-blue-800;
+  color: $tui-blue-800;
 }
 
 // Helpers

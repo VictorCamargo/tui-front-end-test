@@ -2,35 +2,39 @@
   <header class="main-header">
     <div class="container d-flex">
       <div class="d-flex">
-        <nuxt-link :to="localePath('/')">
+        <nuxt-link :to="localePath('/')" aria-label="Home">
           <LogoTui />
         </nuxt-link>
         <nav class="header-menu d-flex">
-          <Button :link="localePath('/')">
+          <AppButton :link="localePath('/')">
             {{ $t('header.menu.hotels') }}
-          </Button>
-          <Button :link="localePath('/')">
+          </AppButton>
+          <AppButton :link="localePath('/')">
             {{ $t('header.menu.destinations') }}
-          </Button>
-          <Button :link="localePath('/')">
+          </AppButton>
+          <AppButton :link="localePath('/')">
             {{ $t('header.menu.inspiration') }}
-          </Button>
+          </AppButton>
         </nav>
       </div>
 
       <div class="d-flex">
         <nav class="header-menu d-flex">
-          <Button :link="localePath('/')">
+          <AppButton :link="localePath('/')">
             {{ $t('header.menu.help') }}
-          </Button>
-          <Button :link="localePath('/')">
+          </AppButton>
+          <AppButton :link="localePath('/')">
             {{ $t('header.menu.send_feedback') }}
-          </Button>
+          </AppButton>
           <LanguageSelector></LanguageSelector>
-          <Button>EUR €</Button>
-          <Button type="lite" :link="localePath('/')">
+          <CurrencySelector></CurrencySelector>
+          <AppButton
+            type="lite"
+            :link="localePath('/')"
+            :aria-label="$t('header.menu.log_in')"
+          >
             {{ $t('header.menu.log_in') }}
-          </Button>
+          </AppButton>
         </nav>
       </div>
     </div>
@@ -39,16 +43,18 @@
 
 <script>
 import LogoTui from 'assets/svg/logo-tui.svg'
-import Button from '@/components/ui/buttons/Button'
-import LanguageSelector from '@/components/header/LanguageSelector'
+import AppButton from '@/components/ui/buttons/AppButton'
+import LanguageSelector from '@/components/ui/LanguageSelector'
+import CurrencySelector from '@/components/ui/CurrencySelector'
 
 export default {
   name: 'TuiHeader',
 
   components: {
     LogoTui,
-    Button,
-    LanguageSelector
+    AppButton,
+    LanguageSelector,
+    CurrencySelector
   }
 }
 </script>
@@ -57,12 +63,12 @@ export default {
 .main-header {
   height: 80px;
   display: flex;
-  border-bottom: 1px solid $color-tui-blue-25;
+  border-bottom: 1px solid $tui-blue-25;
 
   .header-menu {
     align-items: center;
 
-    > .button + .button {
+    > *:not(:first-child) {
       margin-left: 20px;
     }
   }
@@ -71,7 +77,7 @@ export default {
     justify-content: space-between;
   }
 
-  .tui-svg--logo {
+  .app-svg--logo {
     height: 40px;
     margin-top: 14px;
     margin-right: 38px;

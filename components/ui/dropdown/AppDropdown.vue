@@ -31,7 +31,7 @@ export default {
 .app-dropdown {
   position: absolute;
   min-height: 200px;
-  background: $tui-white;
+  background: var(--tui-white);
   box-shadow: box-shadow(level2);
   z-index: z-index(dropdown);
   border-radius: border-radius(base);
@@ -64,7 +64,7 @@ export default {
     content: '▲';
     transform: scaleX(1.2) scaleY(0.6);
     position: absolute;
-    color: $tui-white;
+    color: var(--tui-white);
     text-shadow: 0 -1px rgba(#000, 0.05);
     top: -15px;
   }

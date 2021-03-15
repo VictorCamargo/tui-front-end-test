@@ -77,9 +77,26 @@ $shadow: (
   @return map-get($shadow, $key);
 }
 
-$main-font: TUIType, 'Trebuchet MS';
+// Spacer
+$spacer: (
+  1: 4px,
+  2: 8px,
+  3: 12px,
+  4: 16px,
+  5: 24px,
+  6: 32px,
+  7: 40px,
+  8: 80px,
+  9: 160px
+);
+
+@function spacer($key) {
+  @return map-get($spacer, $key);
+}
 
 // Font-family
+$main-font: TUIType, 'Trebuchet MS';
+
 $font-family: (
   main: $main-font
 );

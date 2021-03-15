@@ -8,21 +8,22 @@
     <section class="container">
       <AppSearch />
     </section>
+
+    <AppDestinations></AppDestinations>
   </div>
 </template>
 
 <script>
-import HotelsList from '@/components/HotelsList'
-import AppSearch from '@/components/AppSearch'
-
 import { seoMetaTags } from '~/utils/seo'
+import AppSearch from '@/components/AppSearch'
 import AppHero from '@/components/AppHero'
+import AppDestinations from '@/components/AppDestinations'
 
 export default {
   components: {
-    HotelsList,
     AppSearch,
-    AppHero
+    AppHero,
+    AppDestinations
   },
 
   head() {
@@ -52,6 +53,11 @@ export default {
   .app-search {
     z-index: 2;
     margin-top: -40px;
+  }
+
+  .h1 {
+    color: var(--tui-dark-100);
+    margin-top: spacer(8);
   }
 }
 </style>

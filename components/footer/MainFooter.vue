@@ -12,4 +12,8 @@ export default {
 }
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+.main-footer {
+  height: 500px;
+}
+</style>

@@ -63,7 +63,7 @@ export default {
 .main-header {
   height: 80px;
   display: flex;
-  border-bottom: 1px solid $tui-blue-25;
+  border-bottom: 1px solid var(--tui-blue-25);
 
   .header-menu {
     align-items: center;

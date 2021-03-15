@@ -36,7 +36,7 @@ export default {
     font-size: 12px;
     font-weight: bold;
     letter-spacing: 1.25px;
-    color: $tui-grey-75;
+    color: var(--tui-grey-75);
     text-transform: uppercase;
     pointer-events: none;
   }

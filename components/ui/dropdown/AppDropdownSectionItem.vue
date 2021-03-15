@@ -41,7 +41,7 @@ export default {
     }
 
     &:hover {
-      background: $tui-blue-25;
+      background: var(--tui-blue-25);
     }
 
     a,

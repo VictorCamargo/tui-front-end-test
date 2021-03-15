@@ -1,8 +1,11 @@
 <template>
-  <label class="form-input" :class="{ 'form-input--focus': focus }">
+  <label
+    class="form-search-input"
+    :class="{ 'form-search-input--focus': focus }"
+  >
     <slot />
     <input
-      class="form-input__input"
+      class="form-search-input__input"
       type="text"
       placeholder="Search a place or hotel"
       @focus="focus = true"
@@ -13,7 +16,7 @@
 
 <script>
 export default {
-  name: 'FormInput',
+  name: 'FormSearchInput',
   data() {
     return {
       focus: false
@@ -23,7 +26,7 @@ export default {
 </script>
 
 <style lang="scss">
-.form-input {
+.form-search-input {
   position: relative;
 
   $root: &;

@@ -2,7 +2,11 @@
   <nuxt-link
     v-if="link"
     class="app-button d-flex"
-    :class="[`app-button--${type}`, { 'app-button--disabled': disabled }]"
+    :class="[
+      `app-button--${type}`,
+      { 'app-button--disabled': disabled },
+      { 'app-button--light': light }
+    ]"
     :to="link"
     key="app-button"
   >
@@ -34,6 +38,10 @@ export default {
     disabled: {
       type: Boolean,
       default: false
+    },
+    light: {
+      type: Boolean,
+      default: false
     }
   }
 }
@@ -50,7 +58,7 @@ export default {
   background: none;
   border: none;
   cursor: pointer;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   font-family: font-family(main);
   min-height: 28px;
@@ -91,7 +99,7 @@ export default {
   &--lite {
     position: relative;
     height: 40px;
-    border: 1px solid $tui-grey-38;
+    border: 1px solid var(--tui-grey-38);
     border-radius: border-radius(base);
     padding: 0 16px;
     align-items: center;
@@ -100,7 +108,7 @@ export default {
 
     &:after {
       content: '';
-      border: 2px solid $tui-dark-100;
+      border: 2px solid var(--tui-dark-100);
       position: absolute;
       left: -2px;
       top: -2px;
@@ -118,12 +126,12 @@ export default {
     }
 
     &:hover {
-      border-color: $tui-dark-100;
+      border-color: var(--tui-dark-100);
     }
 
     &#{$root}--disabled {
-      background: $tui-grey-38u;
-      color: $tui-grey-38;
+      background: var(--tui-grey-38u);
+      color: var(--tui-grey-38);
     }
   }
 
@@ -146,13 +154,39 @@ export default {
       right: -3px;
       bottom: -3px;
       border-width: 3px;
-      border-radius: 0px;
+      border-radius: 0;
     }
 
     &:hover {
       &:after {
         width: 100%;
       }
+    }
+  }
+
+  &--light {
+    color: var(--tui-white);
+
+    .app-svg {
+      stroke: var(--tui-white);
+    }
+
+    &#{$root}--link {
+      &:after {
+        background: var(--tui-white);
+      }
+    }
+  }
+
+  .app-svg {
+    width: 26px;
+    stroke-width: calc(20px * 0.1);
+    margin-left: 4px;
+    transform: translate(0, 2px);
+
+    &:first-child {
+      margin-left: 0;
+      transform: none;
     }
   }
 }

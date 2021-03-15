@@ -31,13 +31,13 @@ export default {
   margin-left: auto;
   margin-right: auto;
   max-height: 400px;
-  display: flex;
   position: relative;
+  display: flex;
 
   &__image {
+    position: relative;
     max-width: 100%;
     object-fit: cover;
-    max-height: 100%;
   }
 }
 </style>

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
+    "dev": "ENVIRONMENT=local nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.13.1",
+    "@nuxtjs/dotenv": "^1.4.1",
     "core-js": "^3.8.3",
     "nuxt": "^2.14.12",
     "nuxt-i18n": "^6.21.0"

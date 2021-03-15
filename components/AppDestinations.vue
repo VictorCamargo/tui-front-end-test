@@ -33,7 +33,7 @@ export default {
 
   async fetch() {
     this.destinations = await this.$axios
-      .get('http://localhost:3001/countries')
+      .get('/countries')
       .then(({ data }) => data)
   }
 }

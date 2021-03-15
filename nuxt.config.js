@@ -1,3 +1,7 @@
+require('dotenv').config({
+  path: !process.env.ENVIRONMENT ? '.env' : `.env.${process.env.ENVIRONMENT}`
+})
+
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -13,6 +17,12 @@ export default {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
 
+  dotenv: {
+    filename: !process.env.ENVIRONMENT
+      ? '.env'
+      : `.env.${process.env.ENVIRONMENT}`
+  },
+
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ['@/assets/scss/_fonts.scss', '@/assets/scss/main.scss'],
 
@@ -21,10 +31,7 @@ export default {
   },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [{ src: '~/plugins/directives.js' }],
-
-  // Auto import components: https://go.nuxtjs.dev/config-components
-  components: true,
+  plugins: [{ src: '~/plugins/directives' }, { src: '~/plugins/axios' }],
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [],

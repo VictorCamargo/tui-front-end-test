@@ -1,0 +1,15 @@
+<svg class="app-svg app-svg--icon-calendar" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"
+     viewBox="0 0 32 32">
+  <defs>
+    <style>
+      #b,#c{fill:none;}#b,#c{stroke:#092a5e;stroke-linecap:round;stroke-width:1.5px;}#b{stroke-linejoin:round;}
+    </style>
+  </defs>
+  <g transform="translate(4 4)">
+    <path id="b" d="M15,25H39V46.333H15Z" transform="translate(-15 -22.333)"/>
+    <rect id="b" width="24" height="5.333" transform="translate(0 2.667)"/>
+    <path id="c" d="M6.834,5.8V.8" transform="translate(-1.334 -0.8)"/>
+    <path id="c" d="M6.834,5.8V.8" transform="translate(5.166 -0.8)"/>
+    <path id="c" d="M6.834,5.8V.8" transform="translate(11.666 -0.8)"/>
+  </g>
+</svg>

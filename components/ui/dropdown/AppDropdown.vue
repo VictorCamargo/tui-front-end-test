@@ -61,12 +61,14 @@ export default {
   }
 
   &:before {
+    font-size: 16px;
     content: '▲';
     transform: scaleX(1.2) scaleY(0.6);
     position: absolute;
     color: var(--tui-white);
     text-shadow: 0 -1px rgba(#000, 0.05);
     top: -15px;
+    line-height: normal;
   }
 }
 </style>

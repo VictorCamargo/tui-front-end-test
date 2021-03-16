@@ -1,0 +1,9 @@
+<svg class="app-svg app-svg--icon-dropdown" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"
+     viewBox="0 0 32 32">
+  <defs>
+    <style>#b{fill:#092a5e;}</style>
+  </defs>
+  <g transform="translate(-876 -420)">
+    <path id="b" d="M6,0l6,6H0Z" transform="translate(898 439) rotate(180)"/>
+  </g>
+</svg>

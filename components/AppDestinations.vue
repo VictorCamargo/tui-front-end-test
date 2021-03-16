@@ -1,6 +1,8 @@
 <template>
   <section class="container">
-    <h1 class="h1 text-center mb-6">DESTINOS</h1>
+    <h1 class="h1 text-center mb-6 mt-8 color-title">
+      {{ $t('home.destinations') }}
+    </h1>
     <AppGrid columns="4">
       <AppCard
         v-for="destination in destinations"

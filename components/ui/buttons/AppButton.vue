@@ -16,7 +16,12 @@
     v-else
     key="app-button"
     class="app-button d-flex"
-    :class="[`app-button--${type}`, { 'app-button--disabled': disabled }]"
+    :class="[
+      `app-button--${type}`,
+      `app-button--${size}`,
+      { 'app-button--disabled': disabled },
+      { 'app-button--dropdown': dropdown }
+    ]"
   >
     <slot />
   </button>
@@ -42,6 +47,14 @@ export default {
     light: {
       type: Boolean,
       default: false
+    },
+    dropdown: {
+      type: Boolean,
+      default: false
+    },
+    size: {
+      type: String,
+      default: 'medium' // large, small, extra-small
     }
   }
 }
@@ -62,6 +75,7 @@ export default {
   align-items: center;
   font-family: font-family(main);
   min-height: 28px;
+  line-height: 0px;
 
   $root: &;
 
@@ -96,15 +110,15 @@ export default {
     }
   }
 
-  &--lite {
+  &--lite,
+  &--red {
     position: relative;
     height: 40px;
-    border: 1px solid var(--tui-grey-38);
     border-radius: border-radius(base);
     padding: 0 16px;
     align-items: center;
     justify-content: center;
-    transition: all 0.2s ease-in;
+    transition: all 0.2s cubic-bezier(0.07, 0.51, 0.35, 0.93);
 
     &:after {
       content: '';
@@ -119,6 +133,14 @@ export default {
       transition: 0.2s ease-in;
     }
 
+    .app-svg {
+      stroke: var(--tui-white);
+    }
+  }
+
+  &--lite {
+    border: 1px solid var(--tui-grey-38);
+
     &:active {
       &:after {
         opacity: 1;
@@ -132,6 +154,20 @@ export default {
     &#{$root}--disabled {
       background: var(--tui-grey-38u);
       color: var(--tui-grey-38);
+    }
+  }
+
+  &--red {
+    background: var(--tui-red-100);
+    color: var(--tui-white);
+
+    &:hover,
+    &:active {
+      background: var(--tui-red-25);
+    }
+
+    &#{$root}--disabled {
+      background: var(--tui-grey-38u);
     }
   }
 
@@ -188,6 +224,25 @@ export default {
       margin-left: 0;
       transform: none;
     }
+  }
+
+  &--small {
+    height: 32px;
+    font-size: 18px;
+  }
+
+  &--large {
+    height: 48px;
+    font-size: 24px;
+
+    .app-svg {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  &--dropdown {
+    padding-right: 5px;
   }
 }
 </style>

@@ -7,7 +7,7 @@
     <input
       class="form-search-input__input"
       type="text"
-      placeholder="Search a place or hotel"
+      :placeholder="$t('search.placeholder')"
       @focus="focus = true"
       @blur="focus = false"
     />
@@ -28,6 +28,7 @@ export default {
 <style lang="scss">
 .form-search-input {
   position: relative;
+  display: flex;
 
   $root: &;
 

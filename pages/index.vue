@@ -54,10 +54,5 @@ export default {
     z-index: 2;
     margin-top: -40px;
   }
-
-  .h1 {
-    color: var(--tui-dark-100);
-    margin-top: spacer(8);
-  }
 }
 </style>

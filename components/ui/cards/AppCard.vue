@@ -4,7 +4,8 @@
     <div class="app-card__content">
       <h3 class="app-card__title h3 mb-2">{{ title }}</h3>
       <AppButton :link="localePath(link)" light>
-        <span>Visit</span><IconArrowLong />
+        <span>{{ $t('visit') }}</span
+        ><IconArrowLong />
       </AppButton>
     </div>
   </div>

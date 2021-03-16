@@ -2,7 +2,7 @@
      viewBox="0 0 32 32">
   <defs>
     <style>
-      .c{stroke:#092a5e;stroke-linecap:round;stroke-width:1.5px;fill:none;}.b{stroke-linejoin:round;}
+      #c{stroke-linecap:round;stroke-width:1.5px;fill:none;}#b{stroke-linejoin:round;fill:none;}
     </style>
   </defs>
   <g transform="translate(4 10.667)">

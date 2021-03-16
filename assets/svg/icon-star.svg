@@ -1,0 +1,13 @@
+<svg class="app-svg app-svg--icon-star" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="100%" height="100%" viewBox="0 0 32 32">
+  <defs>
+    <style>
+      #c{stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px;}
+    </style>
+  </defs>
+  <g transform="translate(0 -0.232)">
+    <path id="c"
+          d="M27,31.3l-7.417,5.377,2.857-8.668L15,22.66l9.182.02L27,14l2.818,8.68L39,22.66l-7.44,5.345,2.857,8.668Z"
+          transform="translate(-11 -10.267)"/>
+  </g>
+</svg>

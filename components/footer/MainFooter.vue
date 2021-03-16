@@ -1,7 +1,7 @@
 <template>
   <footer class="main-footer d-flex">
     <div class="container">
-      TODO Footer
+      <!-- TODO: Footer -->
     </div>
   </footer>
 </template>
@@ -14,6 +14,6 @@ export default {
 
 <style lang="scss">
 .main-footer {
-  height: 500px;
+  height: 200px;
 }
 </style>

@@ -70,6 +70,7 @@ export default {
 
   &__content {
     display: flex;
+    align-items: center;
 
     > :not(:first-child) {
       margin-left: 24px;

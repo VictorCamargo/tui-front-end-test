@@ -1,4 +1,4 @@
-require('dotenv').config({ path: getEnv() })
+require('dotenv').config()
 
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -16,7 +16,7 @@ export default {
   },
 
   dotenv: {
-    filename: getEnv()
+    filename: '.env'
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -77,9 +77,4 @@ export default {
       })
     }
   }
-}
-
-// Get environment file
-function getEnv() {
-  return !process.env.ENVIRONMENT ? '.env' : `.env.${process.env.ENVIRONMENT}`
 }

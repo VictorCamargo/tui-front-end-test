@@ -39,5 +39,7 @@ module.exports = {
     relevance: 'Relevance',
     lower: 'Price - low to high',
     high: 'Price - high to low'
-  }
+  },
+  night: 'night',
+  book_now: 'Book now'
 }

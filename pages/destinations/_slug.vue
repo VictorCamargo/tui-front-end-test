@@ -47,6 +47,39 @@ export default {
     AppFilter
   },
 
+  head() {
+    return {
+      titleTemplate: `${this.country?.country} | %s`,
+      meta: [
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: `TUI Portugal | ${this.country?.country}`
+        },
+        {
+          hid: 'twitter:title',
+          name: 'twitter:title',
+          content: `TUI Portugal | ${this.country?.country}`
+        },
+        {
+          hid: 'og:image',
+          property: 'og:image',
+          content: this.country?.image
+        },
+        {
+          hid: 'twitter:image',
+          name: 'twitter:image',
+          content: this.country?.image
+        },
+        {
+          hid: 'og:url',
+          property: 'og:url',
+          content: `${process.env.BASE_URL}${this.$nuxt.$route.fullPath}`
+        }
+      ]
+    }
+  },
+
   data() {
     return {
       country: null,

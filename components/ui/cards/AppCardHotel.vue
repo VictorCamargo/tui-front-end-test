@@ -18,8 +18,10 @@
       </p>
 
       <div class="app-card-hotel__footer d-flex">
-        <p class="app-card-hotel__price">{{ hotel.price }} € /night</p>
-        <AppButton type="red" size="small">Book now</AppButton>
+        <p class="app-card-hotel__price">
+          {{ hotel.price }} € /{{ $t('night') }}
+        </p>
+        <AppButton type="red" size="small">{{ $t('book_now') }}</AppButton>
       </div>
     </div>
   </div>

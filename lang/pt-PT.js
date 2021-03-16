@@ -39,5 +39,7 @@ module.exports = {
     relevance: 'Relevância',
     lower: 'Preço - Menor para maior',
     high: 'Preço - Maior para menor'
-  }
+  },
+  night: 'noite',
+  book_now: 'Reservar'
 }

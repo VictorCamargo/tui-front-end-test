@@ -1,5 +1,5 @@
 <template>
-  <section class="container">
+  <section class="app-destinations container">
     <h1 class="h1 text-center mb-6 mt-8 color-title">
       {{ $t('home.destinations') }}
     </h1>
@@ -41,4 +41,13 @@ export default {
 }
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+.app-destinations {
+  .app-grid {
+    @media screen and (max-width: 1439px) {
+      row-gap: 32px;
+      grid-template-columns: repeat(2, [col-start] 1fr);
+    }
+  }
+}
+</style>

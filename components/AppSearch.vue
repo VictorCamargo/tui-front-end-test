@@ -7,7 +7,7 @@
           <IconSearch />
         </FormSearchInput>
       </div>
-      <div>
+      <div class="d-flex">
         <div class="app-search__date">
           <IconCalendar />
           <div>
@@ -16,7 +16,7 @@
           </div>
         </div>
       </div>
-      <div>
+      <div class="d-flex">
         <div class="app-search__guest">
           <IconUser />
           <div>
@@ -64,26 +64,40 @@ export default {
   box-shadow: box-shadow(level3);
   justify-content: space-between;
 
+  @media screen and (max-width: 1439px) {
+    flex-direction: column;
+  }
+
   &__title {
     color: var(--tui-dark-100);
+
+    @media screen and (max-width: 1439px) {
+      margin-bottom: 24px;
+    }
   }
 
   &__content {
     display: flex;
     align-items: center;
-
-    > :not(:first-child) {
-      margin-left: 24px;
-    }
   }
 
   &__keyword {
     min-width: 400px;
+    margin-left: 24px;
+
+    @media screen and (max-width: 1920px) {
+      min-width: 350px;
+    }
+
+    @media screen and (max-width: 1439px) {
+      min-width: 274px;
+      margin-left: 0;
+    }
   }
 
   &__date,
   &__guest {
-    display: flex;
+    display: inline-flex;
     padding: 2px 8px;
     border: 1px solid var(--color-border);
     height: 48px;
@@ -95,6 +109,11 @@ export default {
     color: var(--tui-dark-100);
     min-width: 250px;
     line-height: 18px;
+    margin-left: 24px;
+
+    @media screen and (max-width: 1919px) {
+      min-width: 200px;
+    }
 
     .app-svg {
       width: 26px;
@@ -108,6 +127,8 @@ export default {
   }
 
   .app-button {
+    margin-left: 24px;
+
     .app-svg {
       margin-left: 20px;
     }
